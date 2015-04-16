@@ -1,0 +1,36 @@
+
+
+/* ==========================================================================
+/* Author's custom styles ========================================================================== */
+
+.rosado {   background-color: #DD024F; }
+
+.celeste {   background-color:  #2595AA; } .centrado {   text-align: center; }
+
+.btn-amarillo {   color: white;   background: #F5A500;   border-bottom: 3px
+solid #B38629;
+
+  font-size: 1em;
+
+}
+
+.btn-principal{
+
+  color: white; background: #F5A500; border-bottom: 3px solid #B38629;
+
+  font-size: 1.5em; padding: 17px 20px;
+
+}
+
+h1 {   color: #2595AA; } h2,h3, h4 {   color: #DD024F; }
+
+.modal-body {   position: relative;   padding: 15px;   overflow: hidden; }
+
+.check {   width: 50px;   position: absolute;   bottom: 15px;   left: 70px;}
+
+  .pregunta {   height: 300px;   border-radius: 5px;   border: solid; }
+
+  .pregunta p {   color: gray;   font-size: 1.5em;   font-weight: bold; }
+
+  a.img-circle.redes {   padding: 21px;   border-color: #ddd;   border: solid;
+  display: inline-block; }
