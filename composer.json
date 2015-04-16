@@ -47,6 +47,8 @@
 		"preferred-install": "dist"
 	},
 	"extra": {
-                "bower-asset-library": "public/vendor"
+		"asset-installer-paths": {
+               		"bower-asset-library": "public/vendor"
+		}
         }
 }
