@@ -3,6 +3,8 @@
 /* ==========================================================================
 /* Author's custom styles ========================================================================== */
 
+body { padding-top: 40px }
+
 .rosado {   background-color: #DD024F; }
 
 .celeste {   background-color:  #2595AA; } .centrado {   text-align: center; }
