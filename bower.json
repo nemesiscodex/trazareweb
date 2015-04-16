@@ -1,6 +1,7 @@
 {
   "name": "Trazareweb",
   "dependencies": {
-    "angular": "1.4.0-rc.0"
+    "angular": "1.4.0-rc.0",
+    "bootstrap": "~3.3.4"
   }
 }
