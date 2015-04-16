@@ -1,4 +1,4 @@
-<?php namespace App\Commands;
+<?php namespace Trazare\Commands;
 
 abstract class Command {
 

@@ -1,4 +1,4 @@
-<?php namespace App\Events;
+<?php namespace Trazare\Events;
 
 abstract class Event {
 
