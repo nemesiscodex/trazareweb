@@ -5,7 +5,12 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "5.0.*"
+		"laravel/framework": "5.0.*",
+		"fxp/composer-asset-plugin": "~1.0",
+		"bower-asset/angular": "1.4.0-rc.0",
+                "bower-asset/bootstrap": "~3.3.4",
+                "bower-asset/font-awesome": "~4.3.0",
+                "bower-asset/modernizr": "~2.8.3"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
@@ -40,5 +45,8 @@
 	},
 	"config": {
 		"preferred-install": "dist"
-	}
+	},
+	"extra": {
+                "bower-asset-library": "public/vendor"
+        }
 }
