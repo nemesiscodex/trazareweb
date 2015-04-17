@@ -15,8 +15,8 @@ return [
 	*/
 
 	'mailgun' => [
-		'domain' => '',
-		'secret' => '',
+		'domain' => 'trazare.com.py',
+		'secret' => 'key-29bb7a3c6a11483ebf24a4c65115727f',
 	],
 
 	'mandrill' => [
