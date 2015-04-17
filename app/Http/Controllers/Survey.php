@@ -1,6 +1,8 @@
 <?php namespace Trazare\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Mail\Mailer;
 use Trazare\Http\Requests;
 use Trazare\Rasgo;
 use Trazare\Item;
@@ -33,16 +35,37 @@ class Survey extends Controller {
 	* @return Response
 	*/
 	public function submit(Request $request){
-		$name = $request->input('name');
+		$name = $request->input('username');
 		$email = $request->input('email');
-		$rasgo_id = $request->input('rasgo_id');
-		$result = $request->input('result');
+		$results = $request->input('results');
 
-		$user = new User;
+		$user = User::where('email', $email)->first();
+		if(is_null($user)){
+			$user = new User;
+			$user->email = $email;
+		}
+		$user->result = json_encode($results);
 		$user->name = $name;
-		$user->email = $email;
-		$user->rasgo_id = $rasgo_id;
-		$user->result = $result;
 		$user->save();
+		$result_array = [];
+		foreach($results as $result){
+			$rasgo = Rasgo::find($result['id']);
+			$rasgo->count = $rasgo->count;
+			array_push($result_array, $rasgo);
+		}
+		$this->send_mail($name, $email, $result_array);
+
+		return new Response(null, 202);
+	}
+
+	private function send_mail($name, $email, $results){
+		$mailer = app()['mailer'];
+		$mailer->send('mail',
+			array(
+				'name' => $name,
+				'results' => $results
+				), function($message){
+    		$message->to('nemesiscodex@gmail.com', 'julio')->subject('Tus Resultados!');
+		});
 	}
 }
