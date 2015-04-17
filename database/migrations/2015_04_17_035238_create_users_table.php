@@ -17,15 +17,9 @@ class CreateUsersTable extends Migration {
 			$table->increments('id');
 			$table->timestamps();
 			$table->string('name');
-			$table->string('email');
+			$table->string('email')->unique();;
 			// result = MAX | AVG | MIN
-			$table->string('result');
-			$table->integer('rasgos_id')
-				->unsigned()
-				->nullable();
-			$table->foreign('rasgos_id')
-				->references('id')->on('rasgos')
-				->onDelete('set null');
+			$table->longtext('result');
 		});
 	}
 
