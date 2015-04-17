@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'WelcomeController@index');
+Route::get('/rasgos', 'Survey@list_rasgos');
+Route::get('/items', 'Survey@list_items');
