@@ -28,5 +28,7 @@
   <script src="{{ asset('/vendor/jquery/dist/jquery.min.js') }}"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="{{ asset('/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+  @section('scripts')
+  @show
 </body>
 </html>
