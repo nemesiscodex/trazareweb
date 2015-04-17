@@ -3,7 +3,7 @@
 <link href="{{ asset('/css/base.css') }}" rel="stylesheet">
 @stop
 @section('content')
-  <!-- <img src="{{ asset('/img/logo.png') }}"> -->
+  <img src="{{ asset('/img/logo.png') }}">
   <p>Hola! {{ $name }},</p>
   <p></p>
   <p>Estos son los resultados del test!</p>
