@@ -7,8 +7,6 @@ use Trazare\Item;
 use Trazare\User;
 use Trazare\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
-
 class Survey extends Controller {
 
 	/**
