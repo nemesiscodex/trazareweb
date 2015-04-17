@@ -18,6 +18,8 @@ class CreateUsersTable extends Migration {
 			$table->timestamps();
 			$table->string('name');
 			$table->string('email');
+			// result = MAX | AVG | MIN
+			$table->string('result');
 			$table->integer('rasgos_id')
 				->unsigned()
 				->nullable();

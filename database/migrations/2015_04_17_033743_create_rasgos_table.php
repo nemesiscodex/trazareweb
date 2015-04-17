@@ -17,6 +17,7 @@ class CreateRasgosTable extends Migration {
 			$table->increments('id');
 			$table->timestamps();
 			$table->string('name');
+			$table->longText('desc');
 			$table->longText('max_desc');
 			$table->longText('avg_desc');
 			$table->longText('min_desc');
