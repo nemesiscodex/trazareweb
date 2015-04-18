@@ -13,7 +13,7 @@
 
   <!-- Modal -->
   <div ng-app="survey" ng-controller="SurveyCtrl as ctrl" class="modal fade" id="intro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -29,22 +29,31 @@
                 <h4>{$ result.name $}</h4>
                 <p>{$ result.desc $}</p>
               </div>
-              <h3 class="text-center">Te mandamos el resultado completo completo a tu mail</h3>
-              <br>
-              <form name="sendResults" class="col-md-6 col-md-offset-3">
+              <hr>
+              <div ng-if="!ctrl.mailSent">
+                <h3 class="text-center">Te mandamos el resultado completo completo a tu mail</h3>
+                <br>
+                <form name="sendResults" class="col-md-6 col-md-offset-3">
 
-                  <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon  glyphicon-user" aria-hidden="true"></span></span>
-                    <input required name="username" ng-model="ctrl.username" type="text" class="form-control" placeholder="Nombre y Apellido" aria-describedby="sizing-addon2">
-                  </div>
+                    <div class="input-group">
+                      <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon  glyphicon-user" aria-hidden="true"></span></span>
+                      <input required name="username" ng-model="ctrl.username" type="text" class="form-control" placeholder="Nombre y Apellido" aria-describedby="sizing-addon2">
+                    </div>
 
-                   <div class="input-group">
-                    <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
-                    <input required name="email" ng-model="ctrl.email" type="email" class="form-control" placeholder="Email" aria-describedby="sizing-addon2">
-                  </div>
-                  <br>
-                  <button ng-disabled="!sendResults.$valid" ng-click="ctrl.submit()" type="button" class="btn  btn-amarillo">Enviar</button>
-              </form>
+                     <div class="input-group">
+                      <span class="input-group-addon" id="sizing-addon2"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></span>
+                      <input required name="email" ng-model="ctrl.email" type="email" class="form-control" placeholder="Email" aria-describedby="sizing-addon2">
+                    </div>
+                    <br>
+                    <button ng-disabled="!sendResults.$valid" ng-click="ctrl.submit()" type="button" class="btn  btn-amarillo">Enviar</button>
+                </form>
+              </div>
+              <div ng-if="ctrl.mailSent">
+                <div class="alert alert-success" role="alert">
+                  <strong>Exito!</strong>
+                  Se ha enviado el resultado completo a su correo!
+                </div>
+              </div>
             </div>
             <div ng-hide="ctrl.results.length > 0">
                 <h4>{$ ctrl.retest.title $}</h4>

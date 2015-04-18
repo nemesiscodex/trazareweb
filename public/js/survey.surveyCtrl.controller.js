@@ -4,6 +4,7 @@
     .controller('SurveyCtrl', ['$scope','$http', '$sce', function($scope, $http, $sce){
       var $controller = this;
 
+      $controller.mailSent = false;
       $controller.rasgos = [];
       $controller.username = "";
       $controller.email = "";
@@ -35,6 +36,7 @@
 
       var index = -1;
       $controller.init = function(){
+          $controller.showMail = false;
           $controller.username = "";
           $controller.email = "";
           index = -1;
@@ -58,7 +60,9 @@
               };
               return newobj;
             })
-          })
+          }).success(function(){
+            $controller.mailSent = true;
+          });
       };
 
       angular.element('.btn-principal').on('click', function(){
