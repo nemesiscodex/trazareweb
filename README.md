@@ -1,7 +1,10 @@
 ## INSTALL
 
+Simple vocational [test](http://test.trazare.com.py) made in Laravel, AngularJS and Bootstrap
+
 ```bash
-npm install
-bower install
-gulp
+composer update
+php artisan migrate
+php artisan db:seed
+php artisan serve
 ```
