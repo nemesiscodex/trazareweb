@@ -25,7 +25,7 @@
           <div ng-if="ctrl.step == 2">
             <div ng-show="ctrl.results.length > 0">
               <h3>Resultados</h3>
-              <div ng-repeat="result in ctrl.results">
+              <div class="alert alert-warning" ng-repeat="result in ctrl.results">
                 <h4>{$ result.name $}</h4>
                 <p>{$ result.desc $}</p>
               </div>
@@ -49,7 +49,7 @@
                 </form>
               </div>
               <div ng-if="ctrl.mailSent">
-                <div class="alert alert-success" role="alert">
+                <div class="alert alert-warning" role="alert">
                   <strong>Exito!</strong>
                   Se ha enviado el resultado completo a su correo!
                 </div>
