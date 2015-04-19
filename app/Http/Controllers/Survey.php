@@ -67,8 +67,8 @@ class Survey extends Controller {
 				'logo' => array('width' => '160px', 'height' => '75px'),
 				'reminder' => 'Recibiste este correo porque realizaste el test de ' . asset('/'),
 				'facebook' => 'https://www.facebook.com/pages/Trazare/916580758351999'
-				), function($message){
-    		$message->to('nemesiscodex@gmail.com', 'julio')->subject('Tus Resultados!');
+			), function($message) use ($email, $name){
+    			$message->to($email, $name)->subject('Tus Resultados!');
 		});
 	}
 }

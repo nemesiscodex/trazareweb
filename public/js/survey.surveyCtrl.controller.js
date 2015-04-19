@@ -36,7 +36,7 @@
 
       var index = -1;
       $controller.init = function(){
-          $controller.showMail = false;
+          $controller.mailSent = false;
           $controller.username = "";
           $controller.email = "";
           index = -1;
