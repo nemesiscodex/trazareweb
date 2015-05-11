@@ -36,216 +36,217 @@ class RasgoItemTableSeeder extends Seeder {
 		DB::table('users')->delete();
 
 		$rango1 = Rasgo::create([
-			'name' => 'item1',
-			'desc' => 'item1',
+			'name' => 'SOCIAL',
+			'desc' => 'SOCIAL',
 			'max_desc' => 'max',
 			'avg_desc' => 'avg',
 			'min_desc' => 'min'
 			]);
 
 		$rango2 = Rasgo::create([
-			'name' => 'item2',
-			'desc' => 'item2',
-			'max_desc' => 'max',
-			'avg_desc' => 'avg',
-			'min_desc' => 'min'
-			]);
-
-		$rango3 = Rasgo::create([
-			'name' => 'item3',
-			'desc' => 'item3',
+			'name' => 'SALUD',
+			'desc' => 'SALUD',
 			'max' => 7,
 			'max_desc' => 'max',
 			'avg_desc' => 'avg',
 			'min_desc' => 'min'
 			]);
 
+		$rango3 = Rasgo::create([
+			'name' => 'TECNOLOGÍA',
+			'desc' => 'TECNOLOGÍA',
+			
+			'max_desc' => 'max',
+			'avg_desc' => 'avg',
+			'min_desc' => 'min'
+			]);
+
+		$rango4 = Rasgo::create([
+			'name' => 'ARTE',
+			'desc' => 'ARTE',
+			
+			'max_desc' => 'max',
+			'avg_desc' => 'avg',
+			'min_desc' => 'min'
+			]);
+
+		$rango5 = Rasgo::create([
+			'name' => 'ECONOMÍA Y NEGOCIOS',
+			'desc' => 'ECONOMÍA Y NEGOCIOS',
+			
+			'max_desc' => 'max',
+			'avg_desc' => 'avg',
+			'min_desc' => 'min'
+			]);
+
 		Item::create([
-			'name' => 'item1',
-			'img' => 'item1.jpg',
+			'name' => 'Enseñar a otros a leer y escribir',
+			'img' => 'social/item1-1.jpg',
+			'rasgo_id' => $rango1->id,
+			]);
+		Item::create([
+			'name' => 'Defender y discutir representando a otras personas, para llegar a la verdad',
+			'img' => 'social/item1-2.jpg',
+			'rasgo_id' => $rango1->id,
+			]);
+		Item::create([
+			'name' => 'Relatar sucesos de una comunidad escribiendo noticias',
+			'img' => 'social/item1-3.jpg',
+			'rasgo_id' => $rango1->id,
+			]);
+		Item::create([
+			'name' => 'Asistir a las personas carenciadas en momentos difíciles como inundaciones, viviendas, vestimentas, comida, etc.',
+			'img' => 'social/item1-4.jpg',
+			'rasgo_id' => $rango1->id,
+			]);
+		Item::create([
+			'name' => 'Organizar las actividades del grupo de amigos',
+			'img' => 'social/item1-5.jpg',
 			'rasgo_id' => $rango1->id,
 			]);
 
 		Item::create([
-			'name' => 'item2',
-			'img' => 'item2.jpg',
-			'rasgo_id' => $rango2->id,
-			]);
-
-		Item::create([
-			'name' => 'item3',
-			'img' => 'item3.jpg',
-			'rasgo_id' => $rango3->id,
-			]);
-
-		Item::create([
-			'name' => 'item4',
-			'img' => 'item1.jpg',
+			'name' => 'Compartir con personas solidarias, sociables y entusiastas la mayor parte del tiempo',
+			'img' => 'social/item1-6.jpg',
 			'rasgo_id' => $rango1->id,
-			]);
+			]);		
 
 		Item::create([
-			'name' => 'item5',
-			'img' => 'item2.jpg',
+			'name' => 'Sanar heridas, cuidar enfermos ',
+			'img' => 'salud/item2-1.jpg',
 			'rasgo_id' => $rango2->id,
 			]);
-
 		Item::create([
-			'name' => 'item6',
-			'img' => 'item3.jpg',
-			'rasgo_id' => $rango3->id,
-			]);
-
-		Item::create([
-			'name' => 'item7',
-			'img' => 'item1.jpg',
-			'rasgo_id' => $rango1->id,
-			]);
-
-		Item::create([
-			'name' => 'item8',
-			'img' => 'item2.jpg',
+			'name' => 'Cuidar de mi mascota y proteger todo ser vivo',
+			'img' => 'salud/item2-2jpg',
 			'rasgo_id' => $rango2->id,
 			]);
-
 		Item::create([
-			'name' => 'item9',
-			'img' => 'item3.jpg',
-			'rasgo_id' => $rango3->id,
-			]);
-
-		Item::create([
-			'name' => 'item10',
-			'img' => 'item1.jpg',
-			'rasgo_id' => $rango1->id,
-			]);
-
-		Item::create([
-			'name' => 'item11',
-			'img' => 'item2.jpg',
+			'name' => 'Conocer  la conducta de las personas o grupos ',
+			'img' => 'salud/item2-3.jpg',
 			'rasgo_id' => $rango2->id,
 			]);
-
 		Item::create([
-			'name' => 'item12',
-			'img' => 'item3.jpg',
-			'rasgo_id' => $rango3->id,
-			]);
-
-		Item::create([
-			'name' => 'item13',
-			'img' => 'item1.jpg',
-			'rasgo_id' => $rango1->id,
-			]);
-
-		Item::create([
-			'name' => 'item14',
-			'img' => 'item2.jpg',
+			'name' => 'Valorar el cuidado de la alimentación y cuidado de la salud',
+			'img' => 'salud/item2-4.jpg',
 			'rasgo_id' => $rango2->id,
 			]);
-
 		Item::create([
-			'name' => 'item15',
-			'img' => 'item3.jpg',
-			'rasgo_id' => $rango3->id,
-			]);
-
-		Item::create([
-			'name' => 'item16',
-			'img' => 'item1.jpg',
-			'rasgo_id' => $rango1->id,
-			]);
-
-		Item::create([
-			'name' => 'item17',
-			'img' => 'item2.jpg',
+			'name' => 'Practicar regularmente una disciplina deportiva',
+			'img' => 'salud/item2-5.jpg',
 			'rasgo_id' => $rango2->id,
 			]);
-
 		Item::create([
-			'name' => 'item18',
-			'img' => 'item3.jpg',
-			'rasgo_id' => $rango3->id,
-			]);
-
-		Item::create([
-			'name' => 'item19',
-			'img' => 'item1.jpg',
-			'rasgo_id' => $rango1->id,
-			]);
-
-		Item::create([
-			'name' => 'item20',
-			'img' => 'item2.jpg',
+			'name' => 'Realizar actividades tranquilas al aire libre en contacto con la naturaleza',
+			'img' => 'salud/item2-6.jpg',
 			'rasgo_id' => $rango2->id,
 			]);
-
 		Item::create([
-			'name' => 'item21',
-			'img' => 'item3.jpg',
-			'rasgo_id' => $rango3->id,
-			]);
-
-		Item::create([
-			'name' => 'item22',
-			'img' => 'item1.jpg',
-			'rasgo_id' => $rango1->id,
-			]);
-
-		Item::create([
-			'name' => 'item23',
-			'img' => 'item2.jpg',
+			'name' => 'Realizar viajes o exploraciones riesgosas en diferentes regiones',
+			'img' => 'salud/item2-7.jpg',
 			'rasgo_id' => $rango2->id,
 			]);
-
+		
 		Item::create([
-			'name' => 'item24',
-			'img' => 'item3.jpg',
+			'name' => 'Reparar, armar o desarmar cosas',
+			'img' => 'tecnologia/item3-1.jpg',
+			'rasgo_id' => $rango3->id,
+			]);
+		Item::create([
+			'name' => 'Construir edificios, casas, puentes',
+			'img' => 'tecnologia/item3-2.jpg',
+			'rasgo_id' => $rango3->id,
+			]);
+		Item::create([
+			'name' => 'Cuidar un jardín, cultivar y cosechar.',
+			'img' => 'tecnologia/item3-3.jpg',
+			'rasgo_id' => $rango3->id,
+			]);
+		Item::create([
+			'name' => 'Realizar actividades relacionadas al ciclo sustentable del planeta, reciclaje',
+			'img' => 'tecnologia/item3-4.jpg',
+			'rasgo_id' => $rango3->id,
+			]);
+		Item::create([
+			'name' => 'Crear y diseñar productos de diverso tipo',
+			'img' => 'tecnologia/item3-5.jpg',
+			'rasgo_id' => $rango3->id,
+			]);
+		Item::create([
+			'name' => 'Investigar nuevas formas de comunicación tecnológica',
+			'img' => 'tecnologia/item-3-6.jpg',
 			'rasgo_id' => $rango3->id,
 			]);
 
 		Item::create([
-			'name' => 'item25',
-			'img' => 'item1.jpg',
-			'rasgo_id' => $rango1->id,
+			'name' => 'Escribir poesía, novelas, cuentos, blogs, canciones.',
+			'img' => 'arte/item4-1.jpg',
+			'rasgo_id' => $rango4->id,
+			]);
+		Item::create([
+			'name' => 'Ejecutar instrumentos',
+			'img' => 'arte/item4-2.jpg',
+			'rasgo_id' => $rango4->id,
+			]);
+		Item::create([
+			'name' => 'Bailar, cantar, actuar',
+			'img' => 'arte/item4-3.jpg',
+			'rasgo_id' => $rango4->id,
+			]);
+		Item::create([
+			'name' => 'Dibujar, pintar, fotografiar',
+			'img' => 'arte/item4-4.jpg',
+			'rasgo_id' => $rango4->id,
+			]);
+		Item::create([
+			'name' => 'Desarrollar actividades manuales (modelado de objetos, esculturas, tejidos, origami) ',
+			'img' => 'arte/item4-5.jpg',
+			'rasgo_id' => $rango4->id,
+			]);
+		Item::create([
+			'name' => 'Crear nuevas formas de expresar belleza y armonía',
+			'img' => 'arte/item4-6.jpg',
+			'rasgo_id' => $rango4->id,
+			]);
+		Item::create([
+			'name' => 'Comprar y vender cosas para tener una ganancia',
+			'img' => 'economia/item5-1.jpg',
+			'rasgo_id' => $rango5->id,
+			]);
+		Item::create([
+			'name' => 'Pensar en nuevas cosas que las personas necesiten consumir ',
+			'img' => 'economia/item5-2.jpg',
+			'rasgo_id' => $rango5->id,
+			]);
+		Item::create([
+			'name' => 'Hacer cosas nuevas siempre, crear, inventar servicios',
+			'img' => 'economia/item5-3.jpg',
+			'rasgo_id' => $rango5->id,
 			]);
 
 		Item::create([
-			'name' => 'item26',
-			'img' => 'item2.jpg',
-			'rasgo_id' => $rango2->id,
+			'name' => 'Dirigir un grupo de personas para lograr un resultado',
+			'img' => 'economia/item5-4.jpg',
+			'rasgo_id' => $rango5->id,
 			]);
-
 		Item::create([
-			'name' => 'item27',
-			'img' => 'item3.jpg',
-			'rasgo_id' => $rango3->id,
+			'name' => 'Definir estrategias para satisfacer a Clientes',
+			'img' => 'economia/item5-5.jpg',
+			'rasgo_id' => $rango5->id,
 			]);
-
 		Item::create([
-			'name' => 'item28',
-			'img' => 'item1.jpg',
-			'rasgo_id' => $rango1->id,
+			'name' => 'Entender por qué y cómo funciona la economía del país y el mundo',
+			'img' => 'economia/item5-6.jpg',
+			'rasgo_id' => $rango5->id,
 			]);
 
-		Item::create([
-			'name' => 'item29',
-			'img' => 'item2.jpg',
-			'rasgo_id' => $rango2->id,
-			]);
 
-		Item::create([
-			'name' => 'item30',
-			'img' => 'item3.jpg',
-			'rasgo_id' => $rango3->id,
-			]);
 
-		Item::create([
-			'name' => 'item31',
-			'img' => 'item3.jpg',
-			'rasgo_id' => $rango3->id,
-			]);
 
+		
+
+
+		
 	}
 
 }
