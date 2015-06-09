@@ -17,17 +17,24 @@
         ];
 
       $controller.felicidad = $sce.trustAs('html',
-        '<p>La felicidad (del latín <b>felicitas</b>, a su vez de '+
-        'felix, "fértil", "fecundo") es un estado emocional que se produce en la'+
-        ' persona cuando cree haber alcanzado una meta deseada.</p>' +
-        '<p>La felicidad suele ir aparejada a una condición interna o subjetiva de' +
-        'satisfacción y alegría.</p> <p>Algunos psicólogos han tratado de caracterizar' +
-        ' el grado de felicidad mediante diversos tests, y han llegado a definir '+
-        ' la felicidad como una medida de bienestar subjetivo (autopercibido) '+
-        'que influye en las actitudes y el comportamiento de los individuos. '+
-        'Las personas que tienen un alto grado de felicidad muestran generalmente'+
-        'un enfoque del medio positivo, al mismo tiempo que estimula a conquistar '+
-        'nuevas metas (véase motivación).</p>');
+      '<p>Este cuestionario fue creado para que la persona que lo realice pueda identificar alguna de sus motivaciones o intereses profesionales enmarcados o clasificados en cinco campos determinados por las diferentes profesiones más conocidas.
+Estos campos profesionales son: </p>
+
+1-  Social <br>  
+2-  Salud-deporte <br>
+3-  Artístico <br>
+4-  Tecnológico <br>
+5-  Negocios<br> 
+<p>Sabemos que podrían existir otros campos profesionales pero el objetivo actual es identificar la motivación inicial para una posterior búsqueda más profunda con mayores elementos personales que se deben tener para una elección profesional.
+METODOLOGIA</p>
+
+1-  Lee y contesta con tu primer impulso todas las frases que aparecen a continuación
+2-  Deberás elegir la opción me gusta para contestarlas por lo tanto las que no me gustan ya no se tendrán en cuenta en la puntuación final <br>
+3-  Cuando contestes todo, podrás esperar inmediatamente un resultado de acuerdo a lo que has elegido (o puntuado). <br>
+4-  Las conclusiones finales serán las que tuvieron mayor puntuación según la estructura  interna del cuestionario y lo que la persona ha puntuado. <br>
+5-  Después de leer tu resultado debes anotar si te pareció adecuado y te sentiste identificado con el (el resultado) <br>
+6-  Podrás dejar tus datos si quisieras que te contactemos para un mejor análisis de tus intereses profesionales. <br>
+');
 
       $controller.retest = {
         "title": "Se necesita rehacer.",
