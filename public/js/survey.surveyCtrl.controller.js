@@ -18,7 +18,7 @@
 
       $controller.felicidad = $sce.trustAs('html','<p>Este cuestionario fue creado para que la persona que lo realice pueda identificar'+
        'alguna de sus motivaciones o intereses profesionales enmarcados o clasificados en cinco campos determinados por las diferentes profesiones más conocidas. <br>'+
-+'Estos campos profesionales son: </p>'+
+'Estos campos profesionales son: </p>'+
 '1-  Social <br>  '+
 '2-  Salud-deporte <br>'+
 '3-  Artístico <br>' +
