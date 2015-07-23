@@ -31,7 +31,7 @@
               </div>
               <hr>
               <div ng-if="!ctrl.mailSent">
-                <h3 class="text-center">Te mandamos el resultado completo completo a tu mail</h3>
+                <h3 class="text-center">Te enviamos el resultado completo  a tu mail</h3>
                 <br>
                 <form name="sendResults" class="col-md-6 col-md-offset-3">
 
